@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ll{
+            display: flex;
+        }
+        .key{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .val{
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            position: relative;
+            left: 5px;
+        }
+        form{
+            width: 160px;
+            text-align: end;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="formmm">
+        <div class="ll">
+        <div class="key">
+        <label for="">Name : </label>
+        <label for="">Age : </label>
+         <label for="">Mobile : </label>
+         <label for="">Address : </label>
+          <label for="">Pin Code : </label>
+           <label for="">Description : </label>
+        </div>
+        <div class="val">
+        <input type="text" id="name" required>
+        <input type="number" id="age" required>
+        <input type="text" id="mbl" required>
+        <input type="text" id="add" required>
+        <input type="number" id="pc" required>
+        <textarea name="" id="ta" required></textarea>
+        </div>
+    </div>
+    <input type="submit">
+    </form>
+    <script>
+    let name=document.getElementById("name");
+    let age=document.getElementById("age");
+    let mobile=document.getElementById("mbl");
+    let address=document.getElementById("add");
+    let pincode=document.getElementById("pc");
+    let feedback=document.getElementById("ta");
+
+    
+    let form=document.getElementById("formmm");
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault()
+        localStorage.setItem("Name",name.value)
+        localStorage.setItem("Age",age.value)
+        localStorage.setItem("Mobile",mobile.value)
+        localStorage.setItem("Address",address.value)
+        localStorage.setItem("Pincode",pincode.value)
+        localStorage.setItem("Description",feedback.value)
+    })
+
+
+
+
+
+    </script>
+</body>
+</html>
